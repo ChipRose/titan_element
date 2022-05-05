@@ -1,0 +1,52 @@
+/* Themes */
+
+/* Light theme color*/
+
+:root {
+  --cl-fill-tank: #C4C4C4;
+  --cl-fill-water: #6D8B9B;
+  --cl-fill-pipe: #677F89;
+  --cl-fill-pump: #C4C4C4;
+  --cl-fill-engine: #677F89;
+  --cl-fill-scale: #FFFFFF;
+  --cl-fill-scale-range: #FF0000;
+  --cl-fill-display: #FFFFFF;
+  --cl-fill-display-mark: #000000;
+}
+
+.element__tank {
+  fill: var(--cl-fill-tank);
+}
+
+.element__water {
+  fill: var(--cl-fill-water);
+}
+
+.element__pipe {
+  fill: var(--cl-fill-pipe);
+}
+
+.element__pump {
+  fill: var(--cl-fill-pump);
+}
+
+.element__engine {
+  fill: var(--cl-fill-engine);
+}
+
+.element__scale {
+  fill: var(--cl-fill-scale);
+}
+
+.element__scale-range {
+  fill: var(--cl-fill-scale-range);
+  height: 30px;
+}
+
+.element__display {
+  fill: var(--cl-fill-display);
+}
+
+.element__display-mark {
+  fill: var(--cl-fill-display-mark);
+}

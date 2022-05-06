@@ -1,7 +1,7 @@
 const SCALE_HEIGHT = 117;
 const SCALE_START = 46;
 const INDICATOR_HEIGHT = 116;
-const INDICATOR_START = 41;
+const INDICATOR_START = 40;
 
 const levelValue = {
   LOW: 0,
@@ -21,6 +21,8 @@ const elementScale = document.querySelector('#element-scale-range');
 const elementIndicator = document.querySelector('#element-indicator');
 const elementMinMark = document.querySelector('#element-min-mark');
 const elementMaxMark = document.querySelector('#element-max-mark');
+const themeForm = document.querySelector('#theme-switch');
+const body = document.querySelector('.body');
 
 const setState = (value) => {
   if (value >= levelValue.LOW && value <= levelValue.HIGH) {
@@ -57,14 +59,6 @@ const setState = (value) => {
   
 };
 
-setState(waterLevelInput.value);
-
-waterLevelInput.addEventListener('input', () => {
-  setState(waterLevelInput.value);
-  checkValideWaterLevel(waterLevelInput);
-  waterLevelInput.reportValidity();
-});
-
 const checkEmptyField = (field) => {
   if (field.validity.valueMissing) {
     field.setCustomValidity('Это обязательное поле');
@@ -79,5 +73,27 @@ const checkValideWaterLevel = (field) => {
   } else {
     field.setCustomValidity('');
   }
-
 };
+
+setState(waterLevelInput.value);
+
+waterLevelInput.addEventListener('input', () => {
+  setState(waterLevelInput.value);
+  checkValideWaterLevel(waterLevelInput);
+  waterLevelInput.reportValidity();
+});
+
+const setTheme = () => {
+  body.classList.add('body--light-theme');
+  body.classList.remove('body--dark-theme');
+  if (themeForm.querySelector('input:checked').id === 'dark-theme') {
+    body.classList.remove('body--light-theme');
+    body.classList.add('body--dark-theme');
+  }
+};
+
+setTheme();
+
+themeForm.addEventListener('change', () => {
+  setTheme();
+})

@@ -1,0 +1,255 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Page */
+
+.page {
+  min-width: 100%;
+  height: 100%;
+}
+
+/* Body */
+
+.body {
+  display: flex;
+  margin: 0;
+  min-width: 425px;
+  min-height: 100%;
+  flex-direction: column;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.body__main {
+  min-width: 425px;
+}
+
+/* Main */
+
+.main {
+  flex: 1 1 auto;
+}
+
+/* Wrapper */
+
+.wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+/* Themes */
+
+:root {
+  --cl-main: #000000;
+  --cl-main-contrast: #FFFFFF;
+}
+
+/* Light theme color*/
+
+.body--light-theme {
+  --cl-fill-tank: #c4c4c4;
+  --cl-fill-water: #6d8b9b;
+  --cl-fill-pipe: #677f89;
+  --cl-fill-pump: #c4c4c4;
+  --cl-fill-engine: #677f89;
+  --cl-fill-scale: #ffffff;
+  --cl-fill-scale-range: #ff0000;
+  --cl-fill-display: #ffffff;
+  --cl-fill-display-mark: #000000;
+  --cl-brd-mark: #EC8E00;
+}
+
+/* Dark theme color*/
+
+.body--dark-theme {
+  --cl-fill-tank: #50878A;
+  --cl-fill-water: #5A3677;
+  --cl-fill-pipe: #000000;
+  --cl-fill-pump: #FFFFFF;
+  --cl-fill-engine: #000000;
+  --cl-fill-scale: #ffffff;
+  --cl-fill-scale-range: #ff0000;
+  --cl-fill-display: #ffffff;
+  --cl-fill-display-mark: #000000;
+  --cl-brd-mark: #EC8E00;
+}
+
+/* Select Theme  */
+
+.theme-choise .wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.theme-choise__title-wrapper {
+  margin-bottom: 20px;
+}
+
+.theme-choise__title {
+  text-align: center;
+}
+
+.theme-choise__label {
+  text-decoration: none;
+}
+
+.theme-choise__radio:checked + .theme-choise__label {
+  text-decoration: underline;
+}
+
+/* Element color */
+
+.element__tank {
+  fill: var(--cl-fill-tank);
+}
+
+.element__water {
+  fill: var(--cl-fill-water);
+}
+
+.element__pipe {
+  fill: var(--cl-fill-pipe);
+}
+
+.element__pump {
+  fill: var(--cl-fill-pump);
+}
+
+.element__engine {
+  fill: var(--cl-fill-engine);
+}
+
+.element__scale {
+  fill: var(--cl-fill-scale);
+}
+
+.element__scale-range {
+  fill: var(--cl-fill-scale-range);
+  height: 30px;
+}
+
+.element__display {
+  fill: var(--cl-fill-display);
+}
+
+.element__display-mark {
+  fill: var(--cl-fill-display-mark);
+}
+
+/* Element settings */
+
+.element-settings .wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-rows: repeat(min-content, 2);
+  grid-template-columns: min-content 1fr;
+  column-gap: 20px;
+}
+
+.element-settings__title-wrapper {
+  margin-bottom: 20px;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.element-settings__element-wrapper {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.element-settings__range-wrapper {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.element-settings__label {
+  margin-right: 20px;
+}
+
+/* Title */
+
+.section-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Element */
+
+.element {
+  width: 223px;
+  height: 173px;
+  position: relative;
+}
+
+/* Element indicator */
+
+.element-mark {
+  margin: 0;
+  width: 25px;
+  position: absolute;
+  right: 22px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 8px;
+  text-align: center;
+  color: var(--cl-main);
+}
+
+.element__indicator {
+  padding: 1px;
+  right: 22px;
+  z-index: 10;
+  background-color: var(--cl-fill-display);
+  outline: 1px solid var(--cl-brd-mark);
+}
+
+.element__indicator::before {
+  content: "";
+  width: 4px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  transform: translateY(-50%);
+  background-color: var(--cl-main);
+}
+
+.element__max-value {
+  top: 41px;
+}
+
+.element__min-value {
+  top: 158px;
+}
+
+/* Range label */
+
+.label {
+  font-size: 12px;
+}
+
+/* Footer */
+
+.footer {
+  box-shadow: 0 -1px 5px -1px var(--cl-main);
+}
+
+.footer .wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__text {
+  margin: 0;
+  text-align: center;
+}

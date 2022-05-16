@@ -126,15 +126,6 @@
   fill: var(--cl-fill-engine);
 }
 
-.element__scale {
-  fill: var(--cl-fill-scale);
-}
-
-.element__scale-range {
-  fill: var(--cl-fill-scale-range);
-  height: 30px;
-}
-
 .element__display {
   fill: var(--cl-fill-display);
 }
@@ -187,9 +178,35 @@
 /* Element */
 
 .element {
-  width: 223px;
-  height: 173px;
+  width: 500px;
+  height: auto;
   position: relative;
+}
+
+.element__image {
+  width: 100%;
+  height: 100%;
+}
+
+.element__scale {
+  width: 4%;
+  height: 70%;
+  position: absolute;
+  top: 25%;
+  right: 25.5%;
+  border-radius: 100px;
+  background-color: var(--cl-fill-scale);
+}
+
+.element__scale-range {
+  width: 70%;
+  height: 20%;
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  transform: translateX(-50%);
+  border-radius: 100px;
+  background-color: var(--cl-fill-scale-range);
 }
 
 /* Element indicator */
@@ -198,7 +215,7 @@
   margin: 0;
   width: 25px;
   position: absolute;
-  right: 22px;
+  left: 150%;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 8px;
   text-align: center;
@@ -207,7 +224,9 @@
 
 .element__indicator {
   padding: 1px;
-  right: 22px;
+  top: 0;
+  left: 190%;
+  transform: translateY(-50%);
   z-index: 10;
   background-color: var(--cl-fill-display);
   outline: 1px solid var(--cl-brd-mark);
@@ -215,21 +234,21 @@
 
 .element__indicator::before {
   content: "";
-  width: 4px;
+  width: 19%;
   height: 1px;
   position: absolute;
   top: 50%;
-  left: -4px;
+  left: -19%;
   transform: translateY(-50%);
   background-color: var(--cl-main);
 }
 
 .element__max-value {
-  top: 41px;
+  top: 0;
 }
 
 .element__min-value {
-  top: 158px;
+  bottom: 0;
 }
 
 /* Range label */

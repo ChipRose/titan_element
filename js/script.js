@@ -1,8 +1,3 @@
-const SCALE_HEIGHT = 117;
-const SCALE_START = 46;
-const INDICATOR_HEIGHT = 116;
-const INDICATOR_START = 40;
-
 const levelValue = {
   LOW: 0,
   MID: 1000,
@@ -26,37 +21,32 @@ const body = document.querySelector('.body');
 
 const setState = (value) => {
   if (value >= levelValue.LOW && value <= levelValue.HIGH) {
-    const elementHeight = value * SCALE_HEIGHT / levelValue.HIGH;
-    const elementStart = SCALE_START + SCALE_HEIGHT - elementHeight;
-    const indicatorHeight = value * INDICATOR_HEIGHT / levelValue.HIGH;
-    const indicatorStart = INDICATOR_START + SCALE_HEIGHT - indicatorHeight;
+    const scaleRange = value * 98 / levelValue.HIGH;
 
-    elementScale.style.height = `${elementHeight}px`;
-    elementScale.style.y = `${elementStart}`;
-    elementScale.style.fill = colorValue.LOW;
-  
+    elementScale.style.height = `${scaleRange}%`;
+    elementScale.style.backgroundColor = colorValue.LOW;
+
     elementIndicator.textContent = value;
-    elementIndicator.style.top = `${indicatorStart}px`;
-  
+
     if (value > levelValue.MID && value <= levelValue.NORMAL) {
-      elementScale.style.fill = colorValue.MID;
+      elementScale.style.backgroundColor = colorValue.MID;
     } else if (value > levelValue.NORMAL && value <= levelValue.HIGH) {
-      elementScale.style.fill = colorValue.HIGHT;
+      elementScale.style.backgroundColor = colorValue.HIGHT;
     }
-  
+
     if (value > 1900) {
       elementMaxMark.style.display = 'none';
     } else {
       elementMaxMark.style.display = 'block';
     }
-  
+
     if (value < 210) {
       elementMinMark.style.display = 'none';
     } else {
       elementMinMark.style.display = 'block';
     }
   }
-  
+
 };
 
 const checkEmptyField = (field) => {

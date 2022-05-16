@@ -19,9 +19,9 @@
           </h2>
         </div>
         <form class="theme-choise__switch" id="theme-switch">
-          <input class="theme-choise__radio" id="light-theme" type="radio" name="theme" checked >
+          <input class="theme-choise__radio" id="light-theme" type="radio" name="theme" checked>
           <label class="theme-choise__label" for="light-theme">Светлая тема</label>
-          <input class="theme-choise__radio" id="dark-theme" type="radio" name="theme" >
+          <input class="theme-choise__radio" id="dark-theme" type="radio" name="theme">
           <label class="theme-choise__label" for="dark-theme">Тёмная тема</label>
         </form>
       </div>
@@ -35,7 +35,8 @@
         </div>
         <div class="element-settings__element-wrapper">
           <div class="element">
-            <svg class="element__image" width="223" height="173" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="element__image" viewBox="0 0 223 173" preserveAspectRatio="xMaxYMin" width="223" height="173"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="element__tank"
                 d="M79 19H39v8h3v8H24.28c-28.59 0-35.95 138 0 138H198.55c35.95 0 28.59-138 0-138H179v-8h3v-8h-40v8h3v8H76v-8h3v-8Z" />
               <path class="element__water"
@@ -47,21 +48,20 @@
                 d="M39.04 123a1 1 0 0 0-1 1.06l.1 1.64a3 3 0 0 1-5.24 2.17l-1.08-1.23a1 1 0 0 0-1.46-.05l-2.2 2.2v.02l-1.01 1a.4.4 0 0 0 .02.6l1.7 1.5a3 3 0 0 1-2.17 5.24l-1.64-.1a1 1 0 0 0-1.06 1v3.9a1 1 0 0 0 1.06 1l1.64-.1a3 3 0 0 1 2.17 5.25l-1.69 1.48a.43.43 0 0 0-.02.62l1 1 2.2 2.2a1 1 0 0 0 1.46-.04l1.08-1.23a3 3 0 0 1 5.25 2.17l-.1 1.64a1 1 0 0 0 1 1.06h3.9a1 1 0 0 0 1-1.06l-.1-1.64a3 3 0 0 1 5.25-2.17l1.08 1.23a1 1 0 0 0 1.46.05l2.2-2.2v-.02l1.02-1a.4.4 0 0 0-.02-.59l-1.71-1.5a3 3 0 0 1 2.17-5.25l1.64.1a1 1 0 0 0 1.06-1v-3.9a1 1 0 0 0-1.06-1l-1.64.1a3 3 0 0 1-2.17-5.25l1.7-1.49a.41.41 0 0 0 .02-.6l-1-1v-.01l-2.21-2.2a1 1 0 0 0-1.46.04l-1.08 1.23a3 3 0 0 1-5.25-2.17l.1-1.64a1 1 0 0 0-1-1.06h-3.9Zm14.51 5.1Zm-1.2-2.21a2 2 0 0 0-2.92.1l-1.08 1.22a2 2 0 0 1-3.5-1.45l.1-1.63a2 2 0 0 0-2-2.13h-3.9a2 2 0 0 0-2 2.13l.1 1.63a2 2 0 0 1-3.5 1.45l-1.08-1.23a2 2 0 0 0-2.91-.1l-2.21 2.22-.71.7-.3.3a1.4 1.4 0 0 0 .07 2.06l1.7 1.5a2 2 0 0 1-1.45 3.5l-1.63-.11a2 2 0 0 0-2.13 2v3.9a2 2 0 0 0 2.13 2l1.63-.1a2 2 0 0 1 1.45 3.5l-1.69 1.48c-.62.54-.65 1.5-.07 2.08l3.2 3.2a2 2 0 0 0 2.92-.1l1.08-1.22a2 2 0 0 1 3.5 1.45l-.1 1.63a2 2 0 0 0 2 2.13h3.9a2 2 0 0 0 2-2.13l-.1-1.63a2 2 0 0 1 3.5-1.45l1.08 1.23a2 2 0 0 0 2.91.1l2.21-2.22 1.01-1a1.4 1.4 0 0 0-.06-2.05l-1.7-1.5a2 2 0 0 1 1.44-3.5l1.63.1a2 2 0 0 0 2.13-2v-3.9a2 2 0 0 0-2.13-2l-1.63.1a2 2 0 0 1-1.45-3.5l1.7-1.49c.61-.54.64-1.48.06-2.06l-3.2-3.21Zm-24.19 26.7Z" />
               <path class="element__engine" fill-rule="evenodd" clip-rule="evenodd"
                 d="M41 148a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0 1a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
-              <rect class="element__scale" x="158" y="44" width="10" height="121" rx="5" />
-              <rect class="element__scale-range" id="element-scale-range" x="160" y="46" width="6" height="117"
-                rx="3" />
-              <!-- <path class="element__display" d="M176 41h25v127h-25z" /> -->
-              <path class="element__display-mark" d="M176 47h-6v-1h6v1ZM176 163h-6v-1h6v1Z" />
             </svg>
-            <p class="element-mark element__max-value" id="element-max-mark">
-              2000
-            </p>
-            <p class="element-mark element__indicator" id="element-indicator">
-              2000
-            </p>
-            <p class="element-mark element__min-value" id="element-min-mark">
-              0
-            </p>
+            <div class="element__scale">
+              <p class="element-mark element__max-value" id="element-max-mark">
+                2000
+              </p>
+              <p class="element-mark element__min-value" id="element-min-mark">
+                0
+              </p>
+              <div class="element__scale-range" id="element-scale-range">
+                <p class="element-mark element__indicator" id="element-indicator">
+                  2000
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="element-settings__range-wrapper">

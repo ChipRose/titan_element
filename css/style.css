@@ -178,7 +178,7 @@
 /* Element */
 
 .element {
-  width: 500px;
+  width: 600px;
   height: auto;
   position: relative;
 }
@@ -196,6 +196,24 @@
   right: 25.5%;
   border-radius: 100px;
   background-color: var(--cl-fill-scale);
+}
+
+.element__scale::before,
+.element__scale::after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  position: absolute;
+  left: 100%;
+  background-color: var(--cl-main);
+} 
+
+.element__scale::before {
+  top: 1%;
+}
+
+.element__scale::after {
+  bottom: 1%;
 }
 
 .element__scale-range {
@@ -244,11 +262,13 @@
 }
 
 .element__max-value {
-  top: 0;
+  top: 1%;
+  transform: translateY(-50%);
 }
 
 .element__min-value {
-  bottom: 0;
+  bottom: 1%;
+  transform: translateY(50%);
 }
 
 /* Range label */

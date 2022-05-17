@@ -11,7 +11,7 @@
 
 <body class="body page__body">
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="tank" viewBox="0 0 223 173"  fill="none">
+    <symbol id="tank" viewBox="0 0 223 173" fill="none">
       <path class="element__tank"
         d="M79 19H39v8h3v8H24.28c-28.59 0-35.95 138 0 138H198.55c35.95 0 28.59-138 0-138H179v-8h3v-8h-40v8h3v8H76v-8h3v-8Z" />
       <path class="element__water" d="M221.3 84H1.54c-4.76 39.67 1.26 89 22.75 89H198.55c21.5 0 27.5-49.33 22.76-89Z" />
@@ -76,6 +76,16 @@
         </div>
       </div>
     </section>
+    <section class="plot">
+      <div class="wrapper">
+        <div class="plot__title-wrapper">
+          <h2 class="section-title plot__title">
+            График
+          </h2>
+        </div>
+        <div id="plot-element" style="width:600px;height:250px;"></div>
+      </div>
+    </section>
   </main>
   <footer class="footer page__footer">
     <div class="wrapper">
@@ -85,6 +95,8 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+  <script src="js/plot-settings.js"></script>
 </body>
 
 </html>

@@ -86,4 +86,4 @@ setTheme();
 
 themeForm.addEventListener('change', () => {
   setTheme();
-})
+});

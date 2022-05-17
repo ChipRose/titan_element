@@ -84,6 +84,17 @@
           </h2>
         </div>
         <div id="plot-element" style="width:600px;height:250px;"></div>
+        <div class="plot__range-wrapper">
+          <div class="plot__range">
+            <input class="input plot__value" id="plot-time-value" value="0" min="0" max="24"
+              type="number">
+            <label class="label plot__label" for="plot-time-value">Время</label>
+            <input class="input plot__value" id="plot-value" value="0" min="0" max="100000"
+            type="number">
+            <label class="label plot__label" for="plot-value">Количество</label>
+            <button class="plot__button" id="plot-button">Установить значение</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>

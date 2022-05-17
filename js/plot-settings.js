@@ -1,4 +1,7 @@
 const plot = document.querySelector('#plot-element');
+const timeField = document.querySelector('#plot-time-value');
+const valueField = document.querySelector('#plot-value');
+const plotButton = document.querySelector('#plot-button');
 
 const planData = {
   x: [0, 24],
@@ -33,6 +36,11 @@ const predictionData = {
 };
 
 const data = [planData, actuallyDayData, actuallyHourData, predictionData];
+
+plotButton.addEventListener('click', () => {
+  const timeValue = +timeField.value;
+  console.log(actuallyDayData.x.indexOf(timeValue));
+});
 
 Plotly.newPlot(plot, data, {
   margin: { t: 0 }
